@@ -34,6 +34,7 @@ The data object will look like this :
 <details><summary>
 Data
 </summary>
+<code>
 {
     "results": {
         "inventory{}": {
@@ -712,6 +713,7 @@ Data
     "hash": "YOUR HASH",
     "version": "latest"
 }
+</code>
 </details>
 
 The errors are set internally in the class and are using ZodErrors to validate the input data. The errors are not returned in the response.
