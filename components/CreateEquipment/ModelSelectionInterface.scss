@@ -1,0 +1,93 @@
+
+.create-equipment-explore-wrap {
+	width: 80%;
+	padding: 20px 0;
+	margin: 0 auto;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	hr {
+		width: 80%;
+	}
+
+	.select-model {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+
+		.selection-button-div{
+			position: relative;
+
+			svg{
+				width: 26px;
+				height: 26px;
+			}
+
+			.depricated-icon{
+				color: hsl(38, 78%, 53%);
+				position: absolute;
+				top: -13px;
+				right: -13px;
+			}
+		}
+
+	}
+
+	.description {
+		margin-bottom: 3rem;
+	}
+}
+
+.customise-equipment-explore-wrap {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0;
+	gap: 20px;
+	position: relative;
+}
+
+@keyframes shake {
+	0% {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	25% {
+		margin-left: 0.5rem;
+		margin-right: -0.5rem;
+	}
+	75% {
+		margin-left: -0.5rem;
+		margin-right: 0.5rem;
+	}
+	100% {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.line-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.test-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-wrap {
+	display: block;
+
+	&.hidden {
+		display: none;
+	}
+}

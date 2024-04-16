@@ -1,0 +1,132 @@
+.search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #fff;
+  border: 2px solid #83c8ec;
+  border-radius: 100px;
+  box-sizing: border-box;
+  z-index: 11;
+
+  .image {
+    height: 100%;
+    padding: min(2%, 10px) min(5%, 25px);
+
+
+    &.country {
+      border-left: solid 2px #83c8ec;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 2em;
+      color: #9e9e9e;
+
+      &:hover {
+        color: #83c8ec;
+      }
+
+      img {
+        max-width: 60px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .input {
+    margin: 0 15px;
+    padding: 0;
+    background-color: transparent;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    transition: width 0.3s ease-in-out;
+
+    &::placeholder {
+      color: #9e9e9e;
+      opacity: 0.9;
+    }
+
+    &.hidden {
+      opacity: 0;
+      margin: 0;
+      width: 0;
+    }
+  }
+
+  .search-input-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: #83c8ec;
+    top: 100%;
+    left: 25px;
+    width: calc(100% - 50px);
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #83c8ec;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1;
+
+    .list-item {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 15px;
+      gap: 10px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: #83c8ec;
+      }
+
+      &:focus {
+        background-color: #83c8ec;
+      }
+
+      .country-name {
+        font-size: 1.2em;
+        color: #3d3d3d;
+      }
+
+      .country-flag {
+        max-width: 60px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .current {
+      background-color: #83c8ec;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-input {
+    font-size: 0.7em;
+  }
+}

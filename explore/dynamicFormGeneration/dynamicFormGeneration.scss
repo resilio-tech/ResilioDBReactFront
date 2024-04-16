@@ -1,0 +1,328 @@
+@import '../../variables.scss';
+
+.configuration-options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	&.result {
+		padding: 20px;
+		border: 1px solid $main-color;
+		border-radius: 5px;
+		-webkit-box-shadow: 5px 5px 10px 3px #9E9E9E;
+		box-shadow: 5px 5px 10px 3px #9E9E9E;
+	}
+
+	h2 {
+		font-size: inherit;
+		margin: 0;
+	}
+
+	hr {
+		width: 80%;
+		height: 1px;
+		background-color: $main-color;
+	}
+
+	&.result {
+		gap: 5px;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.input-wrapper, .custom-input {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 22rem;
+	}
+
+	.custom-input.search-bar {
+		position: relative;
+		width: 100%;
+
+		.search-input-list {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
+			background-color: $main-color;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: 2px solid $main-color;
+			border-radius: 0 0 10px 10px;
+			box-sizing: border-box;
+			z-index: 1;
+
+			.list-item {
+				background-color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 15px;
+				border: none;
+				cursor: pointer;
+				outline: none;
+
+				&:hover {
+					background-color: #83c8ec;
+				}
+
+				&:focus {
+					background-color: #83c8ec;
+				}
+
+				&.current {
+					background-color: #83c8ec;
+				}
+			}
+		}
+	}
+
+	.custom-input-wrapper {
+		max-width: 100%;
+	}
+
+	.inputs {
+		flex-direction: row;
+		display: flex;
+		gap: 4rem;
+		justify-content: space-between;
+
+		form {
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+		}
+
+		.group-of-inputs {
+			border: 2px solid $main-color;
+			padding: 2rem;
+			border-radius: 1rem;
+			width: 19rem;
+			box-shadow: -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+			.5rem .5rem 1rem hsl(0 0% 50% / .5);
+			outline: none;
+			transition: all 0.1s;
+
+			@media (max-width: 830px) {
+				width: inherit;
+
+			}
+		}
+
+		@media (max-width: 830px) {
+			flex-direction: column;
+
+		}
+	}
+
+	.group {
+		width: 100%;
+		margin-top: 0.5rem;
+		margin-bottom: 1.3rem;
+		border-left: 2px dotted $main-color;
+	}
+
+	.group-controls {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		margin: 10px 0 0 0;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	.alert-display {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding-top: 1rem;
+	}
+
+	.explore-config-actions {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-around;
+		gap: 15px;
+
+		button {
+			padding: 10px 20px;
+			align-self: center;
+			font-size: 1rem;
+			height: 50px;
+		}
+	}
+
+
+	input, select {
+		border: 2px solid $main-color;
+		border-radius: 10px;
+		padding: 0.5rem;
+		margin-top: 0.2rem;
+		margin-bottom: 0.5rem;
+
+		&.invalid-input {
+			animation: shake 0.2s ease-in-out 0s 2;
+			border-color: lightcoral;
+		}
+	}
+
+	select {
+		width: 100%;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.child-padding {
+		padding-left: 20px;
+	}
+
+	.drop-line {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: row;
+		cursor: pointer;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		background: unset;
+		border-bottom: 2px solid $main-color;
+		width: 100%;
+		margin: 15px 0 0 0;
+
+		.keyname {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.chevron {
+			.icon {
+				transition: transform 200ms ease-in-out;
+				transform: rotate(-90deg);
+				justify-self: flex-end;
+
+				&.hidden {
+					display: block !important;
+					transform: rotate(0);
+				}
+			}
+		}
+	}
+}
+
+.data-group-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+
+	.array-controls-containers {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: center;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	.data-group {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 10px;
+
+		&.hidden {
+			display: none;
+		}
+
+		.data-inputs {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+
+			details {
+				width: 100%;
+
+				summary {
+					margin-bottom: 10px;
+					user-select: none;
+
+					&:hover {
+						cursor: pointer;
+					}
+
+				}
+				&[open] {
+					.custom-input {
+						width: auto;
+						margin-left: 25px;
+					}
+				}
+			}
+		}
+
+		.delete-group-wrap {
+			display: flex;
+			position: relative;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			hr {
+				height: 100%;
+				border-left: 2px dotted $main-color;
+				margin-left: 0;
+				margin-right: 10px;
+				background: none;
+				transition: margin-right, margin-left 0.2s ease-in-out;
+
+				&.edit {
+					transition: margin-right, margin-left 0.2s ease-in-out;
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
+
+			.delete-button-wrap {
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				display: none;
+				animation: slideIn 0.3s both;
+
+				&.edit {
+					display: block;
+					animation: slideIn 0.3s both;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideIn {
+	0%   {opacity: 0}
+	25%  {opacity: 0}
+	50%  {opacity: 25%}
+	75%  {opacity: 50%}
+	100% {opacity: 100%}
+}

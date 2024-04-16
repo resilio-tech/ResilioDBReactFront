@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+.export-button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+}
+
+.circular-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.circular-button {
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		cursor: pointer;
+		background: $main-color;
+		color: white;
+		text-align: center;
+		font-size: 25px;
+		border-radius: 50%;
+		margin: 0;
+
+		&.disabled {
+			filter: brightness(90%);
+			background: #9e9e9e;
+			cursor: not-allowed;
+		}
+
+		&.small {
+			width: 30px;
+			height: 30px;
+		}
+
+		&.medium {
+			width: 40px;
+			height: 40px;
+		}
+
+		&.large {
+			width: 50px;
+			height: 50px;
+		}
+
+	}
+}
