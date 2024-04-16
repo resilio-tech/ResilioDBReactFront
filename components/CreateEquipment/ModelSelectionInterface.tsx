@@ -1,6 +1,6 @@
 import {PythonModels} from '../../interfaces/PythonModels.ts';
 import {ReactNode} from 'react';
-import ButtonBoxWithIcon from '../buttonBox/ButtonBoxWithIcon.tsx';
+import ButtonBoxWithIcon from '../buttons/ButtonBoxWithIcon.tsx';
 import {snakeCaseToSentence} from '../../utils/strings/snakeCaseToSentence.ts';
 import ModelToIconMap from '../../utils/ModelToIconMap.tsx';
 import {HatModels} from '../../interfaces/HatModels.ts';
